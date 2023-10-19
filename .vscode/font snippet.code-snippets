@@ -1,0 +1,10 @@
+{
+	"Custom Font Import": {
+		"scope": "javascript,typescript, jsx, tsx",
+		"prefix": "fimport",
+		"body": [
+			"import { font_100, font_200, font_300, font_400, font_500, font_600, font_700, font_800 } from '@/helpers/fonts';",
+		],
+		"description": "Write Import statement for all Font Weights from custom Font file"
+	}
+}

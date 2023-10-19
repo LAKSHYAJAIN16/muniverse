@@ -1,42 +1,22 @@
 import Navbar from '@/components/Nav'
 import React from 'react'
+import { font_100, font_200, font_300, font_400, font_500, font_600, font_700, font_800 } from '@/helpers/fonts';
 
 export default function Pricing() {
-    function paymentstuff() {
-// TODO : Add Payment $#!7
-window.location.replace("/after-payment-confirmation-software");
-    }
-
     return (
         <div>
+
             <Navbar />
-            <div className='mt-10 ml-14 z-10'>
-                <p className='font-epic font-bold text-5xl'>Products</p>
 
-                <div className='flex justify-evenly mt-10'>
-                    <div className='h-[300px] w-[300px] shadow-lg shadow-red-500 border-red-500 border-[1px] cursor-pointer'>
-                        <img src="/monitor.png" className='h-40 w-40 ml-auto mr-auto'></img>
-                        <h1 className='text-center font-epic font-bold text-3xl mt-2 text-red-500 '>Software</h1>
-                        <div className='ml-4 scale-75'>
-                            <li>paperless option</li>
-                            <li>lobbying groups</li>
-                            <li>smart marking</li>
-                            <li>enhanced EB software</li>
-                        </div>
-                    </div>
+            <div className={`overflow-hidden ${font_500}`}>
+                <h1 className={`${font_500} font-bold text-5xl mt-24 text-center`}>Pricing</h1>
+                <p className={`text-center mt-2`}>We at muniverse price each service individually, so you can mix and match what you want.</p>
+                <div className='grid grid-cols-3'>
+                    <div><p>hi!</p></div>
+                    <div><p>hi!</p></div>
+                    <div><p>hi!</p></div>
                 </div>
 
-                <h1 className='font-epic font-bold text-5xl mt-32'>Pricing</h1>
-
-                <div className='flex justify-evenly mt-2'>
-                    <button className='h-[130px] w-[250px] shadow-lg shadow-red-500 border-red-500 border-[1px] cursor-pointer hover:scale-110 transition-all' onClick={() => paymentstuff()}>
-                        <h1 className='text-center font-epic font-bold text-3xl mt-2 text-red-500'>Just Software</h1>
-                        <h1 className='font-epic font-bold text-5xl text-center mt-[12px] '>$10</h1>
-                    </button>
-                </div>
-
-                <br />
-                <br />
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ export default function Home() {
 
       <div id="content" className='ml-3 overflow-hidden'>
         <div className='mt-36 ml-14 z-10'>
-          <h1 className={`${font.className} text-7xl`}>The MUN experience,
+          <h1 className={`${font} text-7xl`}>The MUN experience,
             <br />designed for you</h1>
           <h2 className='mt-4'>
             <span className={`mr-4 text-red-600 ${font.className} text-lg `}>Virtual MUNs</span>
