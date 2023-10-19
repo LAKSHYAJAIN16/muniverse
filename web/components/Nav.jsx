@@ -1,9 +1,10 @@
 import React from 'react'
+import { font_100, font_200, font_300, font_400, font_500, font_600, font_700, font_800 } from '@/helpers/fonts'
 
 export default function Navbar() {
     return (
         <div className='flex items-center mt-3 ml-3 '>
-            <p className="text-4xl font-epic font-bold "><span className='text-red-600'>m</span><span className='text-blue-600'>u</span><span className='text-green-600'>n</span>iverse</p>
+            <p className={`text-4xl font-epic ${font_500.className}`}><span className='text-red-600'>m</span><span className='text-blue-600'>u</span><span className='text-green-600'>n</span>iverse</p>
             <div className='flex justify-center ml-32 mt-2'>
                 <a href="/"><button className="w-28 mr-32 bg-red-300 rounded-3xl pt-1 pb-1 text-black font-epic font-semibold">about us</button></a>
                 <a href="/pricing"><button className="w-28 mr-32 bg-blue-300 rounded-3xl pt-1 pb-1 text-black font-epic font-semibold">pricing</button></a>

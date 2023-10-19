@@ -11,7 +11,7 @@ window.location.replace("/after-payment-confirmation-software");
         <div>
             <Navbar />
             <div className='mt-10 ml-14 z-10'>
-                <h1 className='font-epic font-bold text-5xl'>Products</h1>
+                <p className='font-epic font-bold text-5xl'>Products</p>
 
                 <div className='flex justify-evenly mt-10'>
                     <div className='h-[300px] w-[300px] shadow-lg shadow-red-500 border-red-500 border-[1px] cursor-pointer'>
