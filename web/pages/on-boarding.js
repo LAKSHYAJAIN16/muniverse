@@ -24,9 +24,66 @@ export default function Onboarding() {
                                 <input
                                     className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-red-500 transition-all text-sm w-96 ${font_300}`}
                                     type="text"
-                                    id="name"
-                                    name="name"
+                                    id="schoolname"
+                                    name="schoolname"
                                     placeholder="Enter the name of your school"
+                                    required
+                                />
+                            </div>
+
+                            <div className="mb-4 ">
+                                <label
+                                    className="block text-gray-700 text-md mb-2 "
+                                    htmlFor="name"
+                                >
+                                    school email ID
+                                </label>
+                                <input
+                                    className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-red-500 transition-all text-sm w-96 ${font_300}`}
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter the official email address of your school"
+                                    required
+                                />
+                            </div>
+
+                            <div className="mb-4 ">
+                                <label
+                                    className="block text-gray-700 text-md mb-2 "
+                                    htmlFor="name"
+                                >
+                                    school address
+                                </label>
+                                <input
+                                    className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-red-500 transition-all text-sm w-96 ${font_300}`}
+                                    type="text"
+                                    id="address-line-1"
+                                    name="address-line-1"
+                                    placeholder="Address Line 1"
+                                /><br />
+                                <input
+                                    className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-red-500 transition-all text-sm w-96 ${font_300}`}
+                                    type="text"
+                                    id="address-line-2"
+                                    name="address-line-2"
+                                    placeholder="Address Line 2"
+                                />
+                            </div>
+
+                            <div className="mb-4 ">
+                                <label
+                                    className="block text-gray-700 text-md mb-2 "
+                                    htmlFor="name"
+                                >
+                                    school city
+                                </label>
+                                <input
+                                    className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-red-500 transition-all text-sm w-96 ${font_300}`}
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter the official email address of your school"
                                     required
                                 />
                             </div>
