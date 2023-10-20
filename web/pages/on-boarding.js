@@ -10,6 +10,8 @@ export default function Onboarding() {
                 <div className='mt-24'>
                     <p className='text-5xl text-center'>Welcome to muniverse!</p>
                     <p className={`text-lg text-center ${font_300}`}>Before we get started, we need some information. So please fill out this (boring) form.</p>
+
+                    <input type="text"></input>
                 </div>
             </div>
         </div>
