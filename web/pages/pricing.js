@@ -93,7 +93,7 @@ export default function Pricing() {
                 </div>
 
                 <div className='flex justify-center mt-16  mb-10'>
-                    <a href='/on-boarding'><button className='w-96 h-16 rounded-2xl bg-blue-200 hover:scale-110 transition-all'>start now</button></a>
+                    <a href='/on-boarding'><button className='w-96 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all'>start now</button></a>
                 </div>
             </div>
         </div>

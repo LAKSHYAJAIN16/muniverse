@@ -3,7 +3,7 @@ import { font_100, font_200, font_300, font_400, font_500, font_600, font_700, f
 
 export default function Navbar() {
     return (
-        <div className='fixed mt-0 mb-0 ml-0 mr-0 w-full bg-white'>
+        <div className='fixed mt-0 mb-0 ml-0 mr-0 w-full bg-white z-[12361287361]'>
             <div className='flex items-center ml-3 border-b-2 pb-4 pt-3 '>
                 <p className={`text-4xl ${font_400}`}><span className='text-red-600'>m</span><span className='text-blue-600'>u</span><span className='text-green-600'>n</span>iverse</p>
                 <div className='flex justify-center ml-28 mt-2'>
