@@ -32,7 +32,7 @@ export default function Onboarding() {
                                     <div className="mb-4 ">
                                         <label
                                             className="block text-gray-700 text-md mb-2 "
-                                            htmlFor="name"
+                                            htmlFor="schoolname"
                                         >
                                             name of your school
                                         </label>
@@ -49,15 +49,15 @@ export default function Onboarding() {
                                     <div className="mb-4 ">
                                         <label
                                             className="block text-gray-700 text-md mb-2 "
-                                            htmlFor="name"
+                                            htmlFor="schoolemail"
                                         >
                                             school email ID
                                         </label>
                                         <input
                                             className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-red-500 transition-all text-sm w-96 ${font_300}`}
                                             type="email"
-                                            id="email"
-                                            name="email"
+                                            id="schoolemail"
+                                            name="schoolemail"
                                             placeholder="Enter the official email address of your school"
                                             required
                                         />
@@ -66,7 +66,7 @@ export default function Onboarding() {
                                     <div className="mb-4 ">
                                         <label
                                             className="block text-gray-700 text-md mb-2 "
-                                            htmlFor="name"
+                                            htmlFor="address-line-1"
                                         >
                                             school address
                                         </label>
@@ -125,6 +125,22 @@ export default function Onboarding() {
                                 <div className='mt-10 ml-10'>
                                     <h1 className='mb-5 text-3xl'>Conference Information</h1>
                                     <div className="mb-4 ">
+                                        <label
+                                            className="block text-gray-700 text-md mb-2 "
+                                            htmlFor="name"
+                                        >
+                                            conference name
+                                        </label>
+                                        <input
+                                            className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-blue-500 transition-all text-sm w-96 ${font_300}`}
+                                            type="text"
+                                            id="conf-name"
+                                            name="conf-name"
+                                            placeholder="Enter the name of your conference"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="mb-4 ">
                                         <div className='grid grid-cols-2'>
                                             <div>
                                                 <label
@@ -159,6 +175,32 @@ export default function Onboarding() {
 
                 {view === 1 && (
                     <>
+                        <div className='mt-24'>
+                            <p className='text-6xl text-center'>Choose your Products</p>
+
+                            <div>
+                                <br />
+                                <div className='flex items-center'>
+                                    <h1 className={`text-4xl ${font_700} text-red-500 ml-32`}>Software</h1>
+                                    <input className='ml-10' type="checkbox"></input>
+                                </div>
+                                <br />
+                                <div className='flex items-center'>
+                                    <h1 className={`text-4xl ${font_700} text-green-500 ml-32`}>Virtual MUN</h1>
+                                    <input className='ml-10' type="checkbox"></input>
+                                </div>
+                                <br />
+                                <div className='flex items-center'>
+                                    <h1 className={`text-4xl ${font_700} text-blue-500 ml-32`}>Planning </h1>
+                                    <input className='ml-10' type="checkbox"></input>
+                                </div>
+
+                                <div className='flex justify-center mt-16  mb-10'>
+                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-red-400 hover:scale-110 transition-all' onClick={() => setView(0)}>back</button>
+                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all' onClick={() => setView(1)}>next</button>
+                                </div>
+                            </div>
+                        </div>
                     </>
                 )}
             </div>
