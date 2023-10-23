@@ -129,7 +129,7 @@ export default function Onboarding() {
                                             className="block text-gray-700 text-md mb-2 "
                                             htmlFor="name"
                                         >
-                                            conference name
+                                            conference nam
                                         </label>
                                         <input
                                             className={`px-3 py-2 border border-gray-300 rounded-md outline-none focus:outline-none focus:border-blue-500 transition-all text-sm w-96 ${font_300}`}
