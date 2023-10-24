@@ -4,3 +4,4 @@
 > Spice up pricing page + the onboarding page
 > Implement actual payment service (stripe most probably)
 > Purge the unused font classes from the JS like bruh actually
+> Bruh write code like bro stop reading
