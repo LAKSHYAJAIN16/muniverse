@@ -116,7 +116,7 @@ export default function Onboarding() {
                                                 onChange={(e) => {
                                                     console.log(e);
                                                 }}
-                                                placeHolder="Select Cit"
+                                                placeHolder="Select City"
                                             />
                                         </div>
                                     </div>
