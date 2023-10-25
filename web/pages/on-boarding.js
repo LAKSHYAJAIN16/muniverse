@@ -19,8 +19,18 @@ export default function Onboarding() {
     const [view, setView] = useState(0);
     const [incompletePayload, setIncompletePayload] = useState();
 
-    function registerCallback() {
+    function registerCallback(e) {
+        e.preventDefault();
+
         // Assemble Payload
+        const form_data = new FormData(e.target);
+        const dat = {
+            ...incompletePayload,
+            isPlanning: form_data.has("isPlanning"),
+            isVirtualMUN: form_data.has("isVirtual"),
+            isSoftware: form_data.has("isSoftware")
+        }
+        console.log(dat);
     }
 
     function firstPageCallback(e) {
@@ -213,28 +223,28 @@ export default function Onboarding() {
                         <div className='mt-24'>
                             <p className='text-6xl text-center'>Choose your Products</p>
 
-                            <div>
+                            <form onSubmit={(e) => registerCallback(e)}>
                                 <br />
                                 <div className='flex items-center'>
                                     <h1 className={`text-4xl ${font_700} text-red-500 ml-32`}>Software</h1>
-                                    <input className='ml-10' type="checkbox"></input>
+                                    <input className='ml-10' type="checkbox" name="isSoftware"></input>
                                 </div>
                                 <br />
                                 <div className='flex items-center'>
                                     <h1 className={`text-4xl ${font_700} text-green-500 ml-32`}>Virtual MUN</h1>
-                                    <input className='ml-10' type="checkbox"></input>
+                                    <input className='ml-10' type="checkbox" name="isVirtual"></input>
                                 </div>
                                 <br />
                                 <div className='flex items-center'>
                                     <h1 className={`text-4xl ${font_700} text-blue-500 ml-32`}>Planning </h1>
-                                    <input className='ml-10' type="checkbox"></input>
+                                    <input className='ml-10' type="checkbox" name="isPlanning"></input>
                                 </div>
 
                                 <div className='flex justify-center mt-16  mb-10'>
-                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-red-400 hover:scale-110 transition-all' onClick={() => setView(0)}>back</button>
-                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all' onClick={() => registerCallback()}>next</button>
+                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-red-400 hover:scale-110 transition-all' type="button" onClick={() => setView(0)}>back</button>
+                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all' type="submit">next</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </>
                 )}
