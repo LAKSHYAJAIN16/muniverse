@@ -12,10 +12,46 @@ import 'react-calendar/dist/Calendar.css';
 
 export default function Onboarding() {
     const [countryid, setCountryid] = useState(0);
-    const [stateid, setstateid] = useState(0);
+    const [stateid, setStateid] = useState(0);
+    const [cityid, setCityid] = useState(0);
     const [startDate, setStartDate] = useState();
     const [endDate, setEndDate] = useState();
     const [view, setView] = useState(0);
+    const [incompletePayload, setIncompletePayload] = useState();
+
+    function registerCallback() {
+        // Assemble Payload
+    }
+
+    function firstPageCallback(e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.target)
+
+        // Assemble Payload
+        const payload = {
+            school_name: formData.get("schoolname"),
+            school_email: formData.get("schoolemail"),
+            schoolAddress: {
+                line_1: formData.get("address-line-1"),
+                line_2: formData.get("address-line-2"),
+            },
+            location: {
+                country: countryid,
+                state: stateid,
+                city: cityid,
+            },
+            conf_name: formData.get("conf-name"),
+            conf_dates: {
+                start: startDate,
+                end: endDate,
+            }
+        }
+        console.log(payload);
+        setIncompletePayload(payload);
+        setView(1);
+    }
+
     return (
         <div>
             <Navbar />
@@ -26,7 +62,7 @@ export default function Onboarding() {
                             <p className='text-6xl text-center'>Welcome to muniverse!</p>
                             <p className={`text-lg text-center ${font_300}`}>Before we get started, we need some information. So please fill out this (boring) form.</p>
 
-                            <form>
+                            <form onSubmit={(e) => firstPageCallback(e)}>
                                 <div className="mt-10 ml-10">
                                     <h1 className='mb-5 text-3xl'>School Information</h1>
                                     <div className="mb-4 ">
@@ -101,7 +137,7 @@ export default function Onboarding() {
                                             <StateSelect
                                                 countryid={countryid}
                                                 onChange={(e) => {
-                                                    setstateid(e.id);
+                                                    setStateid(e.id);
                                                 }}
                                                 placeHolder="Select State"
                                             />
@@ -114,7 +150,7 @@ export default function Onboarding() {
                                                 countryid={countryid}
                                                 stateid={stateid}
                                                 onChange={(e) => {
-                                                    console.log(e);
+                                                    setCityid(e.id);
                                                 }}
                                                 placeHolder="Select City"
                                             />
@@ -127,7 +163,7 @@ export default function Onboarding() {
                                     <div className="mb-4 ">
                                         <label
                                             className="block text-gray-700 text-md mb-2 "
-                                            htmlFor="name"
+                                            htmlFor="conf-name"
                                         >
                                             conference name
                                         </label>
@@ -145,30 +181,29 @@ export default function Onboarding() {
                                             <div>
                                                 <label
                                                     className="block text-gray-700 text-md mb-2 "
-                                                    htmlFor="name"
                                                 >
                                                     start date of conference
                                                 </label>
-                                                <Calendar value={startDate} />
+                                                <Calendar value={startDate} onChange={(e) => setStartDate(e[0])} />
                                             </div>
                                             <div>
                                                 <label
                                                     className="block text-gray-700 text-md mb-2 "
-                                                    htmlFor="name"
                                                 >
                                                     end date of conference
                                                 </label>
-                                                <Calendar value={endDate} />
+                                                <Calendar value={endDate} onChange={(e) => setStartDate(e[0])} />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div className='flex justify-center mt-16  mb-10'>
+                                    <button className='w-96 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all' type="submit">next</button>
+                                </div>
                             </form>
 
                             <br />
-                            <div className='flex justify-center mt-16  mb-10'>
-                                <button className='w-96 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all' onClick={() => setView(1)}>next</button>
-                            </div>
                         </div>
                     </>
                 )}
@@ -197,7 +232,7 @@ export default function Onboarding() {
 
                                 <div className='flex justify-center mt-16  mb-10'>
                                     <button className='scale-90 w-72 h-16 rounded-2xl bg-red-400 hover:scale-110 transition-all' onClick={() => setView(0)}>back</button>
-                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all' onClick={() => setView(1)}>next</button>
+                                    <button className='scale-90 w-72 h-16 rounded-2xl bg-green-400 hover:scale-110 transition-all' onClick={() => registerCallback()}>next</button>
                                 </div>
                             </div>
                         </div>
