@@ -31,6 +31,9 @@ export default function Onboarding() {
             isSoftware: form_data.has("isSoftware")
         }
         console.log(dat);
+        
+        // Send that baby to backend
+        
     }
 
     function firstPageCallback(e) {
