@@ -184,7 +184,7 @@ export default function Onboarding() {
                                                 >
                                                     start date of conference
                                                 </label>
-                                                <Calendar value={startDate} onChange={(e) => setStartDate(e[0])} />
+                                                <Calendar value={startDate} onChange={setStartDate} />
                                             </div>
                                             <div>
                                                 <label
@@ -192,7 +192,7 @@ export default function Onboarding() {
                                                 >
                                                     end date of conference
                                                 </label>
-                                                <Calendar value={endDate} onChange={(e) => setStartDate(e[0])} />
+                                                <Calendar value={endDate} onChange={setEndDate} />
                                             </div>
                                         </div>
                                     </div>
