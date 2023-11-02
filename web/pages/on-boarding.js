@@ -9,6 +9,8 @@ import {
 import "react-country-state-city/dist/react-country-state-city.css";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import axios from "axios";
+import { config } from "dotenv";
 
 export default function Onboarding() {
     const [countryid, setCountryid] = useState(0);
@@ -19,7 +21,8 @@ export default function Onboarding() {
     const [view, setView] = useState(0);
     const [incompletePayload, setIncompletePayload] = useState();
 
-    function registerCallback(e) {
+    async function registerCallback(e) {
+        config();
         e.preventDefault();
 
         // Assemble Payload
@@ -31,9 +34,10 @@ export default function Onboarding() {
             isSoftware: form_data.has("isSoftware")
         }
         console.log(dat);
-        
+
         // Send that baby to backend
-        
+        const res = await axios.post(BACKEND_ENDPOINT + "/api/POST/on-board", dat);
+        console.log(res.data);
     }
 
     function firstPageCallback(e) {

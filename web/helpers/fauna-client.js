@@ -1,11 +1,11 @@
 import { Client } from "faunadb"
-import {config} from "dotenv"
+import { config } from "dotenv"
 
-function get_client(){
+function get_client() {
     config();
     const client = new Client({
-        secret:"fnAFRH3Mi1AATXdd95NUTyhR6Fml_mAa8zLySBco",
-        domain:"db.us.fauna.com"
+        secret: process.env.FAUNA_SECRET,
+        domain: "db.us.fauna.com"
     });
     return client;
 }
