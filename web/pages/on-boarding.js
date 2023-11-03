@@ -33,10 +33,10 @@ export default function Onboarding() {
             isVirtualMUN: form_data.has("isVirtual"),
             isSoftware: form_data.has("isSoftware")
         }
-        console.log(dat);
+        console.log(JSON.stringify(dat));
 
         // Send that baby to backend
-        const res = await axios.post(BACKEND_ENDPOINT + "/api/POST/on-board", dat);
+        const res = await axios.post(process.env.BACKEND_ENDPOINT + "/api/POST/on-board", dat);
         console.log(res.data);
     }
 
