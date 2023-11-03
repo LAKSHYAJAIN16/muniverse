@@ -261,7 +261,7 @@ export default function Onboarding() {
                 )}
 
                 {view === 2 && (
-                    <div className='scale-150 flex justify-center'>
+                    <div className='flex absolute mt-[50%] transform-[justify-center'>
                         <Loader />
                     </div>
                 )}

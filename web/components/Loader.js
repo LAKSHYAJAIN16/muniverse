@@ -5,7 +5,7 @@ import React from 'react'
 export default function Loader() {
     return (
         <div>
-            <div class={styles.lds_ripple}><div></div><div></div></div>
+            <div className={styles.lds_grid}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
     )
 }
