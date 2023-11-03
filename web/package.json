@@ -16,7 +16,8 @@
     "react": "^18",
     "react-calendar": "^4.6.1",
     "react-country-state-city": "^1.1.0",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10",

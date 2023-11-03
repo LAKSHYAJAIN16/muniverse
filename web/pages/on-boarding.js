@@ -36,7 +36,9 @@ export default function Onboarding() {
         console.log(JSON.stringify(dat));
 
         // Send that baby to backend
-        const res = await axios.post(process.env.BACKEND_ENDPOINT + "/api/POST/on-board", dat);
+        const url = process.env.BACKEND_ENDPOINT + "/api/POST/on-board";
+        console.log(url);
+        const res = await axios.post(url, dat);
         console.log(res.data);
     }
 
