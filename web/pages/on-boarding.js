@@ -11,6 +11,8 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import axios from "axios";
 import { config } from "dotenv";
+import { backend } from '@/helpers/not-env-variables';
+import Loader from '@/components/Loader';
 
 export default function Onboarding() {
     const [countryid, setCountryid] = useState(0);
@@ -36,8 +38,8 @@ export default function Onboarding() {
         console.log(JSON.stringify(dat));
 
         // Send that baby to backend
-        const url = process.env.BACKEND_ENDPOINT + "/api/POST/on-board";
-        console.log(url);
+        setView(2);
+        const url = backend + "/api/POST/on-board";
         const res = await axios.post(url, dat);
         console.log(res.data);
     }
@@ -256,6 +258,12 @@ export default function Onboarding() {
                             </form>
                         </div>
                     </>
+                )}
+
+                {view === 2 && (
+                    <div className='scale-150 flex justify-center'>
+                        <Loader />
+                    </div>
                 )}
             </div>
         </div>
