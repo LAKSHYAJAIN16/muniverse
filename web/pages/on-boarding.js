@@ -12,7 +12,7 @@ import 'react-calendar/dist/Calendar.css';
 import axios from "axios";
 import { config } from "dotenv";
 import { backend } from '@/helpers/not-env-variables';
-import Loader from '@/components/Loader';
+import Loader, { CenteredLoader } from '@/components/Loader';
 
 export default function Onboarding() {
     const [countryid, setCountryid] = useState(0);
@@ -261,9 +261,7 @@ export default function Onboarding() {
                 )}
 
                 {view === 2 && (
-                    <div className='flex absolute mt-[50%] transform-[justify-center'>
-                        <Loader />
-                    </div>
+                    <CenteredLoader />
                 )}
             </div>
         </div>
