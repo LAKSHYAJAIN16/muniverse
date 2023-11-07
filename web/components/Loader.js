@@ -1,13 +1,12 @@
 import styles from "@/styles/Loader.module.css";
-
 import React from 'react'
 
 export const funny_messages = [
-    "Reticulating splines",
-    "Generating witty dialog",
-    "Swapping time and space",
-    "Spinning violently around the y-axis",
-    "Tokenizing real life",
+    "Reticulating splines ...",
+    "Generating witty dialog ...",
+    "Swapping time and space ...",
+    "Spinning violently around the y-axis ...",
+    "Tokenizing real life ",
     "Bending the spoon",
     "Filtering morale",
     "Don't think of purple hippos",
@@ -85,7 +84,7 @@ export const funny_messages = [
     "Where did all the internets go",
     "Connecting Neurotoxin Storage Tank",
     "Granting wishes",
-    "Time flies when you’re having fun.",
+    "Time flies when you're having fun.",
     "Get some coffee and come back in ten minutes..",
     "Spinning the hamster…",
     "99 bottles of beer on the wall..",
@@ -104,18 +103,18 @@ export const funny_messages = [
     "i'm not lazy, I'm just relaxed!!",
     "Never steal. The government hates competition.",
     "Why are they called apartments if they are all stuck together?",
-    "Life is Short – Talk Fast!!!!",
-    "Optimism – is a lack of information..",
+    "Life is Short - Talk Fast!!!!",
+    "Optimism - is a lack of information..",
     "Save water and shower together",
     "Whenever I find the key to success, someone changes the lock.",
-    "Sometimes I think war is God’s way of teaching us geography.",
-    "I’ve got problem for your solution…..",
-    "Where there’s a will, there’s a relative.",
+    "Sometimes I think war is God's way of teaching us geography.",
+    "I've got problem for your solution…..",
+    "Where there's a will, there's a relative.",
     "User: the word computer professionals use when they mean !!idiot!!",
     "Adults are just kids with money.",
     "I think I am, therefore, I am. I think.",
     "A kiss is like a fight, with mouths.",
-    "You don’t pay taxes—they take taxes.",
+    "You don't pay taxes—they take taxes.",
     "Coffee, Chocolate, Men. The richer the better!",
     "I am free of all prejudices. I hate everyone equally.",
     "git happens",
@@ -141,9 +140,9 @@ export const funny_messages = [
     "I didn't choose the engineering life. The engineering life chose me.",
     "Dividing by zero",
     "Spawn more Overlord!",
-    "If I’m not back in five minutes, just wait longer.",
-    "Some days, you just can’t get rid of a bug!",
-    "We’re going to need a bigger boat.",
+    "If I'm not back in five minutes, just wait longer.",
+    "Some days, you just can't get rid of a bug!",
+    "We're going to need a bigger boat.",
     "Chuck Norris never git push. The repo pulls before.",
     "Web developers do it with <style>",
     "I need to git pull --my-life-together",
@@ -193,7 +192,7 @@ export const funny_messages = [
     "What is the difference btwn a hippo and a zippo? One is really heavy, the other is a little lighter",
     "Please wait, while we purge the Decepticons for you. Yes, You can thanks us later!",
     "Chuck Norris once urinated in a semi truck's gas tank as a joke.that truck is now known as Optimus Prime.",
-    "Chuck Norris doesn’t wear a watch. HE decides what time it is.",
+    "Chuck Norris doesn't wear a watch. HE decides what time it is.",
     "Mining some bitcoins",
     "Downloading more RAM..",
     "Updating to Windows Vista",
@@ -274,12 +273,9 @@ export default function Loader() {
 export function CenteredLoader() {
     return (
         <div className='w-full m-0 absolute top-[50%] transform-[translateY(-50%)]'>
-            <div className='flex flex-col items-center justify-center scale-1'>
+            <div className='flex flex-col items-center justify-center scale-1 -mt-5'>
                 <div className={styles.lds_grid}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 <h2 className="mt-1 text-xl">{funny_messages[Math.floor(Math.random() * (funny_messages.length - 1))]}
-                    <span>.</span>
-                    <span>.</span>
-                    <span>.</span>
                 </h2>
             </div>
         </div>

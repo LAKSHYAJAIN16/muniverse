@@ -41,7 +41,8 @@ export default function Onboarding() {
         setView(2);
         const url = backend + "/api/POST/on-board";
         const res = await axios.post(url, dat);
-        console.log(res.data);
+
+        // All of this is garbage.
     }
 
     function firstPageCallback(e) {
