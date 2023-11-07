@@ -42,7 +42,8 @@ export default function Onboarding() {
         const url = backend + "/api/POST/on-board";
         const res = await axios.post(url, dat);
 
-        // All of this is garbage.
+        // Hotter than Wasabi? Yes, lyrical genius
+        
     }
 
     function firstPageCallback(e) {

@@ -2,6 +2,8 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/hello-world!")
+@app.route("/")
 def function():
-    return "hello world!"
+    return "Dev Server haha yes"
+
+app.run(debug=True)
